@@ -1,6 +1,5 @@
 ---
-title: Welcome to Quartz
+title: Welcome to Rakin's Archive
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+Academic writtings of [Towfiq Omar Rakin](https://rakin.me)
