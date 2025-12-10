@@ -5,22 +5,26 @@
 ###### b. A memory location has physical address `80FD2H`. In what segment does it have offset `BFD2H`? <span style="float: right; ">03 </span>
 **Ans:** As we know,
 $$
-\begin{align}
+\begin{aligned}
 \text{Physical Address}=\text{Segment Address} \times \text{10H }+ \text{Offset Address}
-\end{align}
+\end{aligned}
 $$
 Given, 
-	$\text{Physical Address}=\text{80FD2H}$
-	$\text{Offset Address}=\text{BFD2H}$
+$$
+\begin{aligned}
+\text{Physical Address} &=\text{80FD2H} \\
+\text{Offset Address} &=\text{BFD2H}
+\end{aligned}
+$$
 
 Thus,
 $$
-\begin{align} 
+\begin{aligned} 
 \text{Segment Address} &= \frac{\text{Physical Address}-\text{Offset Address}}{\text{10H}} \\ \\
 &=\frac{\text{80FD2H}-\text{BFD2H}}{\text{10H}} \\ \\
 &= \frac{\text{75000H}}{\text{10H}} \\ \\
 \text{Segment Address} &= \text{7500H} 
-\end{align} 
+\end{aligned} 
 $$
 So, segment address `7500H` have the offset address `BFD2H`.
 
@@ -159,10 +163,10 @@ above:
 ###### c. How signed numbers are represented in microprocessor? Calculate the range of 4-bit number.<span style="float: right; ">02</span>
 **Ans:** Signed numbers are represented by 2's compliment in microprocessor. The **MSB** acts as a sign bit.
 $$
-\begin{align}
-0 &\to \text{Positive number} \\ \\
+\begin{aligned}
+0 &\to \text{Positive number} \\
 1 &\to \text{Negative number}
-\end{align}
+\end{aligned}
 $$
 The range of 4-bit positive number:
 $$
