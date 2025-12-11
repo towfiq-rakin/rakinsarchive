@@ -24,19 +24,20 @@ Among four  different categories, two models are:
 ---
 #### Question 2
 ###### a. Find the **Primary Key** for all the tables with brief justification of the reason to choose the attribute in the primary key: <span style="float: right; ">06 </span>
-*order* (order_id, product_id, quantity, unit, unit_price, discount, bill)
-*warehouse_stock* (warehouse_id, product_id, quantity, last_updated)
+*order* (order_id, product_id, quantity, unit, unit_price, discount, bill) \
+*warehouse_stock* (warehouse_id, product_id, quantity, last_updated) \
 *order_details*(customer_id, product_id, warehouse_location, order_date, quantity, shipping status)
-**Ans:**
-**1. `order`**
+
+**Ans:** \
+**1. `order`** \
 	**Primary Key:** _(order_id, product_id)_  
 	**Justification:**  Each order may include multiple products. Thus, the combination of _order_id_ and _product_id_ uniquely identifies every product entry within an order.
 
-**2. `warehouse_stock`**
+**2. `warehouse_stock`** \
 	**Primary Key:** _(warehouse_id, product_id)_  
 	**Justification:**  A product can be stored in multiple warehouses. The pair _(warehouse_id, product_id)_ uniquely identifies each product stored in a specific warehouse.
 
- **3. `order_details`**
+ **3. `order_details`**\
 	**Primary Key:** _(customer_id, product_id, order_date)_  
 	**Justification:**  A customer can order the same product on different dates. Hence, _(customer_id, product_id, order_date)_ uniquely represents each order transaction.
 
@@ -58,9 +59,9 @@ CREATE TABLE orders (
 ---
 #### Question 3
 ###### a. Consider the following relational schema for an online grocery shop database.<span style="float: right; ">02+03+03 </span>
-*customer* (customer_id, customer_name, city, age)
-*product* (product_id, product_name, price, category)
-*order* (order_id, customer_id, product_id, quantity, order_date)
+*customer* (customer_id, customer_name, city, age) \
+*product* (product_id, product_name, price, category)\
+*order* (order_id, customer_id, product_id, quantity, order_date)\
 *stock* (product_id, warehouse, quantity_available)
 
 Write **relational algebra expressions** for each of the queries:
@@ -78,9 +79,9 @@ Write **relational algebra expressions** for each of the queries:
 ---
 #### Question 4
 Consider the following relational schema for an online grocery shop database.
-*customer* (customer_id, customer_name, city, age)
-*product* (product_id, product_name, price, category)
-*order* (order_id, customer_id, product_id, quantity, order_date)
+*customer* (customer_id, customer_name, city, age)\
+*product* (product_id, product_name, price, category)\
+*order* (order_id, customer_id, product_id, quantity, order_date)\
 *stock* (product_id, warehouse, quantity_available)
 ###### a. Write **query in SQL** for each of the following queries: <span style="float: right; ">03+04+03 </span>
 1. Show the customer IDs in the descending order who have ordered products in the "Electronics" category.
