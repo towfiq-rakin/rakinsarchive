@@ -97,9 +97,7 @@ decimal Fee
 
   
 
-WARD ||--|{ BED : "Contains"
-
-BED ||--o{ PATIENT_ADMISSION : "Used In"
+WARD ||--|{ PATIENT_ADMISSION : "Contains"
 
 PATIENT ||--o{ PATIENT_ADMISSION : "Admitted Via"
 
@@ -113,14 +111,6 @@ string WardType
 
 }
 
-BED {
-
-string BedNo PK
-
-int WardID PK,FK
-
-}
-
 PATIENT_ADMISSION {
 
 int NurseID PK,FK
@@ -129,7 +119,7 @@ int PatientID PK,FK
 
 int WardID PK,FK
 
-string BedNo FK
+string BedNo
 
 date AdmissionDate PK
 
@@ -147,7 +137,6 @@ $$
 &PATIENT(\underline{PatientID}, Name, DOB, Address)\\
 &APPOINTMENT(\underline{DoctorID, Date, Time}, PatientID, Diagnosis, Fee)\\
 &WARD(\underline{WardID}, WardType)\\
-&BED(\underline{BedNo}, WardID)\\
 &PATIENT\space ADMISSION(\underline{NurseID,PatientID, BedNo, WardID, AdmissionDate})\\
 \end{aligned}
 $$
