@@ -1,6 +1,5 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
-import { CustomOgImages } from "./quartz/plugins/emitters/ogImage"
 
 /**
  * Quartz 4 Configuration
@@ -10,7 +9,7 @@ import { CustomOgImages } from "./quartz/plugins/emitters/ogImage"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "Rakin's Archive",
-    pageTitleSuffix: "Rakin's Archive",
+    pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
