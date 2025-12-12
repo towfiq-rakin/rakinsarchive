@@ -1,5 +1,5 @@
 ---
-title: "DBMS Assignment"
+title: DBMS Assignment
 draft: true
 ---
 
