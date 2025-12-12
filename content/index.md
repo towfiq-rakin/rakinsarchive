@@ -9,3 +9,4 @@ Academic writtings of [Towfiq Omar Rakin](https://rakin.me)
 - [DBMS Mid Solution](DBMS%20Mid%20Solution.md)
 #### CSE-3105: Microprocessor, Microcontroller and Assembly Language
 - [MMAL Mid Solve](MMAL%20Mid%20Solve.md)
+- [8051 Hand Note](8051%20Microcontroller.md)
