@@ -11,7 +11,8 @@ $$
 &\text{order (order\_id, cust\_id, res\_id, menu\_id, date, total)}
 \end{aligned}
 $$
-Write a query in SQL for each of the following:
+Write a query in SQL for each of the following:  
+
 **Ans:**
 1. Find the name of restaurants who serves any type of 'soup' mentioned in the menu. <span style="float: right; ">03 </span>
 ```sql
@@ -228,4 +229,33 @@ Since the graph contains **no cycles** (it is a Directed Acyclic Graph), the sch
 
 **Serialized Order:** $T_1 \rightarrow T_2 \rightarrow T_4 \rightarrow T_3$
 
+###### b. How can a *shadow-database* scheme be implemented to ensure the recoverability of the database?<span style="float: right; ">05</span>
+**Ans:** The recovery-management component of a database system implements the support for atomicity and durability.  
+**The *shadow-database* scheme:**
+- Assume that only one transaction is active at a time.
+- A pointer called db_pointer always points to the current consistent copy of the database.
+- All updates are made on a shadow copy of the database, and db_pointer is made to point to the updated shadow copy only after the transaction reaches partial commit and all updated pages have been flushed to disk.
+- In case transaction fails, old consistent copy pointed to by db_pointer can be used, and the shadow copy can be deleted.
+  ![[shadow-database.png]]
+###### c. Illustrate the possible states of a transaction.<span style="float: right; ">05</span>
+**Ans:**  
+```mermaid
+---
+config:
+
+theme: neutral
+---
+graph LR
+	active((Active))
+	partially((Partially<br/>committed))
+	committed((Committed))
+	failed((Failed))
+	aborted((Aborted))
+	
+	active --> partially
+	active --> failed
+	partially --> committed
+	partially --> failed
+	failed --> aborted
+```
 
