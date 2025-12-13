@@ -235,7 +235,8 @@ Since the graph contains **no cycles** (it is a Directed Acyclic Graph), the sch
 - Assume that only one transaction is active at a time.
 - A pointer called db_pointer always points to the current consistent copy of the database.
 - All updates are made on a shadow copy of the database, and db_pointer is made to point to the updated shadow copy only after the transaction reaches partial commit and all updated pages have been flushed to disk.
-- In case transaction fails, old consistent copy pointed to by db_pointer can be used, and the shadow copy can be deleted.
+- In case transaction fails, old consistent copy pointed to by db_pointer can be used, and the shadow copy can be deleted.  
+  
   ![[shadow-database.png]]
 ###### c. Illustrate the possible states of a transaction.<span style="float: right; ">05</span>
 **Ans:**  
