@@ -146,7 +146,7 @@ Write a relational algebra for each of the following:
 
 Here, *left outer join* took all the values from the left table `course` and displayed corresponding information of right table `prereq`. As there is no record of `CS-315` in `prereq` table, it displayed null in `prereq_id` column.  
 
-**Right Outer Join**
+**Right Outer Join**  
 `course natural right outer join prereq`  
 
 | course_id | title       | dept_name  | credits | prereq_id |
