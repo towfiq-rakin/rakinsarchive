@@ -1,6 +1,40 @@
 ---
 title: DBMS Final Solution
 ---
+### Question 1
+###### a. "Using database can overcome the drawbacks of file system to store data"- justify you opinion.<span style="float: right; ">07</span>
+**Ans:** Transitioning from a file system to a Database Management System (DBMS) is essential because file systems lack the mechanisms to ensure data reliability and safety. Based on the provided slides, a DBMS justifies its use by solving the following critical problems:
+
+1. **Ensuring Atomicity of Updates**
+    File systems cannot guarantee that complex updates happen correctly. If a system crashes during a fund transfer, data might be left in a broken state (e.g., money deducted but not credited). A DBMS guarantees atomicity, meaning a transaction is treated as a single unit, it either completes fully or not at all, preventing data corruption.
+    
+2. **Handling Concurrent Access**
+    In file systems, if multiple users try to update data simultaneously, they can overwrite each other's work (e.g., two people withdrawing money at the exact same moment). DBMSs use concurrency control mechanisms to manage simultaneous access, ensuring data remains accurate even with many users.
+    
+3. **Reducing Redundancy and Inconsistency**
+    File systems encourage duplicating data across different files. This leads to redundancy and eventually inconsistency (e.g., a student’s address is updated in one file but not another). A DBMS centralizes data storage, ensuring that any update is instantly reflected across the entire system.
+    
+4. **Enforcing Integrity and Security**
+    File systems bury data rules (like "balance > 0") inside program code, making them hard to change. A DBMS enforces these integrity constraints globally. Additionally, while file systems often give "all-or-nothing" access, a DBMS provides granular security, allowing specific users to access only the data they need.
+    
+
+**Conclusion**  
+While file systems are sufficient for simple storage, they fail in multi-user environments. A DBMS is necessary to provide the consistency, security, and reliability required for modern applications.
+###### b. Summarize the procedure of Query Processing with pictorial representation.<span style="float: right; ">07</span>
+**Ans:**  
+1. Parsing and translation
+2. Optimization
+3. Evaluation  
+![[QueryProcessing.png]]
+###### c. Outline the comparative view between sparse and dense indexing with appropriate examples. <span style="float: right; ">06</span>
+**Ans:** There are two types of ordered indices that we can use:  
+- **Dense index**  
+  In a dense index, an index entry appears for every search-key value in the file. In a dense non-clustering index, the index must store a list of pointers to all records with the same search-key value.  
+  ![[DesneIndex.png]]
+- **Sparse index**  
+  In a sparse index, an index entry appears for only some of the search-key values. Sparse indices can be used only if the relation is stored in sorted order of the search key, that is, if the index is a clustering index.  
+  ![[SparseIndex.png]]
+
 ### Question 2
 ###### a. Consider the following relational schema for a restaurant database:<span style="float: right; ">13 </span>
 $$

@@ -3,17 +3,19 @@
 
 **Ans:** 
 1. **Physical level:** 
-	   The lowest level of abstraction describes how the data are actually stored. The physical level describes complex low-level data structures in detail.
+	The lowest level of abstraction describes how the data are actually stored. The physical level describes complex low-level data structures in detail.
 2. **Logical level:**
-	   Describes data stored in database, and the relationships among the data. The conceptual schema describes the design of a database at the conceptual level. Conceptual level is also known as logical level.
-	   **type** instructor = **record**
-		   ID : string;
-		   name : string;
-		   dept_name : string;
-		   salary : integer;
-		**end**;
+	Describes data stored in database, and the relationships among the data. The conceptual schema describes the design of a database at the conceptual level. Conceptual level is also known as logical level.  
+	```
+	type instructor = record  
+	  ID : string;  
+	  name : string;  
+	  dept_name : string;  
+	  salary : integer;  
+	end;
+	```
 3. **View level:**
-	   Application programs hide details of data types. Views can also hide information (such as an employee’s salary) for security purposes.
+	Application programs hide details of data types. Views can also hide information (such as an employee’s salary) for security purposes.
 
 ###### b. What is **Data Model**? Write down the name of two existing data model.<span style="float: right; ">04 </span>
 **Ans:** Underlying the structure of a database is the data model: a collection of conceptual tools for describing data, data relationships, data semantics, and consistency constraints. A data model provides a way to describe the design of a database at the physical, logical, and view levels.
@@ -58,7 +60,7 @@ CREATE TABLE orders (
 
 ---
 #### Question 3
-###### a. Consider the following relational schema for an online grocery shop database.<span style="float: right; ">02+03+03 </span>
+###### a. Consider the following relational schema for an online grocery shop database.<span style="float: right; ">02+03+03 </span>  
 *customer* (customer_id, customer_name, city, age) \
 *product* (product_id, product_name, price, category)\
 *order* (order_id, customer_id, product_id, quantity, order_date)\
