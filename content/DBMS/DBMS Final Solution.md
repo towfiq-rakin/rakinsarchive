@@ -294,3 +294,59 @@ graph LR
 	failed --> aborted
 ```
 
+### Question 5
+###### a. Consider the relation-$\text{patient (patient\_id, patient\_name, disease, doctor\_id, department)}$  
+**with the following functional dependency,**  
+$$
+\begin{aligned}
+F=&\{patient\_id \to patient\_name,disease,doctor\_id\}\\
+&\{doctor\_id \to department\}
+\end{aligned}
+$$
+**If $patient$ is decomposed into two smaller relations as-**  
+$\text{patient1 (patient\_id, patient\_name, disease)}$  
+$\text{patient2 (patient\_name, doctor\_id, department)}$  
+**determine the type of this decomposition (lossless or lossy).**<span style="float: right; ">08</span>  
+
+**Ans:** For a decomposition of relation $R$ into sub-relations $R_1$ and $R_2$ to be lossless, the **intersection of attributes** (the common attributes) must be a **superkey** for at least one of the sub-relations.  
+
+Mathematically, if $R_1 \cap R_2 = A$, then either:
+1. $A \rightarrow R_1$ (A determines all attributes in $R_1$) **OR**
+2. $A \rightarrow R_2$ (A determines all attributes in $R_2$)  
+
+The common attribute between $R_1$ and $R_2$ is:
+
+$$
+\begin{aligned}
+Intersection = R_1 \cap R_2 = \{patient\_name\}
+\end{aligned}
+$$
+We must check if the common attribute, **`patient_name`**, can uniquely identify the rows in either $R_1$ or $R_2$ based on the given Functional Dependencies ($F$).  
+The closure of `patient_name` is just itself:  
+$$
+\begin{aligned}
+\{patient\_name\}^+ = \{patient\_name\}
+\end{aligned}
+$$  
+Since the common attribute ($patient\_name$) is **not a superkey** for either of the decomposed relations, the join of these two tables would result in "spurious tuples" (duplicate or incorrect data associations).  
+**Therefore, the decomposition is Lossy.**
+###### b. Discuss different types of mapping cardinality in the context of an Entity-Relationship (ER) model with examples.<span style="float: right; ">06</span>
+
+**Ans:** There are mainly 4 types if mapping cardinality in a ER model. To distinguish among
+these types, we draw either a directed line ($\to$) or an undirected line (— ) between
+the relationship set and the entity set in question, as follows:  
+- **One-to-one:** We draw a directed line from the relationship set advisor to both entity sets instructor and student (see Figure (a)). This indicates that an instructor may advise at most one student, and a student may have at most one advisor.  
+- **One-to-many:** We draw a directed line from the relationship set advisor to the entity set instructor and an undirected line to the entity set student (see Figure (b)). This indicates that an instructor may advise many students, but a student may have at most one advisor.  
+- **Many-to-one:** We draw an undirected line from the relationship set advisor to the entity set instructor and a directed line to the entity set student. This indicates that an instructor may advise at most one student, but a student may have many advisors.  
+- **Many-to-many:** We draw an undirected line from the relationship set advisor to both entity sets instructor and student (see Figure (c)). This indicates that an instructor may advise many students, and a student may have many advisors.  
+  ![[MappingCardinality.png]]
+###### c. What is materialized view? how is it different from non-materialized view?<span style="float: right; ">06</span>
+
+**Ans:** A **materialized view** is a database object that stores the actual result of a query physically on the disk, much like a standard table. Instead of running the underlying query every time, the database computes the result once (or periodically) and saves it. The fundamental difference lies in **when** the computation happens and **where** the data lives.  
+- **Non-Materialized View (Standard View):** This is a "virtual" table. It stores only the SQL query definition, not the data. Every time you query a standard view, the database engine executes the underlying query in real-time against the source tables.  
+- **Materialized View:** This is a "physical" copy. It executes the query ahead of time and stores the output. When you query it, the database reads the stored output directly, skipping the complex processing (joins, aggregations) required to generate it. 
+
+### Question 6
+###### a. Write short notes on:<span style="float: right; ">10</span><br>(i) Canonical cover $(F_{c})$<br>(ii) Aggregation  
+
+**Ans:** 
