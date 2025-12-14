@@ -72,12 +72,21 @@ GROUP BY res_name;
 ```
 4. Display the names of customers who ordered “chicken_curry” from “Indian” restaurants, along with the order date and total amount spent.<span style="float: right; ">04 </span>
 ```sql
-SELECT cust_name, `date`, total
-FROM restaurant 
-NATURAL JOIN menu
-NATURAL JOIN customer
-NATURAL JOIN `order`
-WHERE item_name = 'chicken_curry' AND res_type = 'Indian';
+SELECT 
+    C.cust_name, 
+    O.date, 
+    O.total
+FROM 
+    customer C
+JOIN 
+    "order" O ON C.cust_id = O.cust_id
+JOIN 
+    resturant R ON O.res_id = R.res_id
+JOIN 
+    menu M ON O.menu_id = M.menu_id
+WHERE 
+    M.item_name = 'chicken_curry' 
+    AND R.res_type = 'Indian';
 ```
 ###### b. Imagine, you are tasked to control the access of users (students, teachers, chairman) to a relation containing the marks of this course according to the authorization as:
 |   User   |  Class Test   |  Assignment   | Final Exam |
