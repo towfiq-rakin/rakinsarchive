@@ -461,3 +461,5 @@ flowchart TB
 	CF --> AB & DE & GH
 	MT --> L & O & WX
 ```
+---
+Also, See [[DBMS Mid Solution]].
