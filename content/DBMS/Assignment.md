@@ -1,6 +1,6 @@
 ---
 title: DBMS Assignment
-draft: true
+draft: false
 ---
 
 # DBMS Assignment 
