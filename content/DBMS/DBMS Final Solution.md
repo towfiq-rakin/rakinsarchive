@@ -359,3 +359,105 @@ the relationship set and the entity set in question, as follows:
 ###### a. Write short notes on:<span style="float: right; ">10</span><br>(i) Canonical cover $(F_{c})$<br>(ii) Aggregation  
 
 **Ans:** 
+###### b. Explain the ACID properties of database in case of transaction. <span style="float: right; ">06</span>
+
+**Ans:**  
+
+###### c. Perform the operations in the following B Tree with order = 3.
+1. Delete K
+2. Insert C
+3. Insert I
+4. Delete J
+```mermaid
+flowchart TB
+	J(("•J•")) --> DG(("•D•G•")) & LT(("•L•T•"))
+	AB(("A,B"))
+	EF(("E,F"))
+	H(("H"))
+	K(("K"))
+	MO(("M,O"))
+	WX(("W,X"))
+	
+	DG --> AB & EF & H
+	LT --> K & MO & WX
+```
+
+**Ans:**  For order $M=3,$  
+1. Root
+   - Min child = 2
+   - Max child = 3
+1. Internal node
+   - Min child = 2
+   - Max child = 3  
+
+See [[B Tree]] for more details.  
+
+**Delete K**  
+```mermaid
+flowchart TB
+	J(("•J•"))
+	DG(("•D•G•"))
+	MT(("•M•T•"))
+	AB(("A,B"))
+	EF(("E,F"))
+	H(("H"))
+	L(("L"))
+	O(("O"))
+	WX(("W,X"))
+	
+	J --> DG & MT
+	DG --> AB & EF & H
+	MT --> L & O & WX
+```
+
+**Insert C**  
+```mermaid
+flowchart TB
+	J(("•J•"))
+	CF(("•C•F•"))
+	MT(("•M•T•"))
+	AB(("A,B"))
+	DE(("D,E"))
+	GH(("G,H"))
+	L(("L"))
+	O(("O"))
+	WX(("W,X"))
+	  
+	J --> CF & MT
+	CF --> AB & DE & GH
+	MT --> L & O & WX
+```
+**Insert I**  
+```mermaid
+flowchart TB
+	I(("•I•"))
+	CF(("•C•F•"))
+	MT(("•M•T•"))
+	AB(("A,B"))
+	DE(("D,E"))
+	GH(("G,H"))
+	JL(("J,L"))
+	O(("O"))
+	WX(("W,X"))
+	
+	I --> CF & MT
+	CF --> AB & DE & GH
+	MT --> JL & O & WX
+```
+**Delete J**  
+```mermaid
+flowchart TB
+	I(("•I•"))
+	CF(("•C•F•"))
+	MT(("•M•T•"))
+	AB(("A,B"))
+	DE(("D,E"))
+	GH(("G,H"))
+	L(("L"))
+	O(("O"))
+	WX(("W,X"))
+	
+	I --> CF & MT
+	CF --> AB & DE & GH
+	MT --> L & O & WX
+```
