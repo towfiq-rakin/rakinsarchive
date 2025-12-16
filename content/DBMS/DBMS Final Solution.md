@@ -3,7 +3,7 @@ title: DBMS Final Solution
 ---
 ### Question 1
 ###### a. "Using database can overcome the drawbacks of file system to store data"- justify you opinion.<span style="float: right; ">07</span>
-**Ans:** Transitioning from a file system to a Database Management System (DBMS) is essential because file systems lack the mechanisms to ensure data reliability and safety. Based on the provided slides, a DBMS justifies its use by solving the following critical problems:
+**Ans:** Transitioning from a file system to a Database Management System (DBMS) is essential because file systems lack the mechanisms to ensure data reliability and safety. DBMS justifies its use by solving the following critical problems:
 
 1. **Ensuring Atomicity of Updates**
     File systems cannot guarantee that complex updates happen correctly. If a system crashes during a fund transfer, data might be left in a broken state (e.g., money deducted but not credited). A DBMS guarantees atomicity, meaning a transaction is treated as a single unit, it either completes fully or not at all, preventing data corruption.

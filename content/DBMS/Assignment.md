@@ -205,6 +205,7 @@ To determine the Candidate Key, we calculate the attribute closure of the potent
 1. $DoctorID \rightarrow DocName, DocSalary$ 
 2. $PatientID \rightarrow PatientName$ 
 3. $DoctorID, Date, Time \rightarrow PatientID, Diagnosis, Fee$
+4. $DoctorID, Date, Time, PatientID \to Diagnosis, Fee$
 
 The attributes `DoctorID`, `Date`, and `Time` never appear on the right-hand side of any functional dependency. Therefore, they must be part of the Candidate Key.
 
