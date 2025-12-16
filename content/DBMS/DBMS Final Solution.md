@@ -430,36 +430,42 @@ flowchart TB
 **Insert I**  
 ```mermaid
 flowchart TB
-	I(("•I•"))
-	CF(("•C•F•"))
+	FJ(("•F•J•"))
+	C(("•C•"))
+	H(("•H•"))
 	MT(("•M•T•"))
 	AB(("A,B"))
 	DE(("D,E"))
-	GH(("G,H"))
-	JL(("J,L"))
-	O(("O"))
-	WX(("W,X"))
-	
-	I --> CF & MT
-	CF --> AB & DE & GH
-	MT --> JL & O & WX
-```
-**Delete J**  
-```mermaid
-flowchart TB
-	I(("•I•"))
-	CF(("•C•F•"))
-	MT(("•M•T•"))
-	AB(("A,B"))
-	DE(("D,E"))
-	GH(("G,H"))
+	G(("G"))
+	I(("I"))
 	L(("L"))
 	O(("O"))
 	WX(("W,X"))
 	
-	I --> CF & MT
-	CF --> AB & DE & GH
+	FJ --> C & H & MT
+	C --> AB & DE
+	H --> G & I
 	MT --> L & O & WX
+```
+**Delete J**  
+```mermaid
+flowchart TB
+	FM(("•F•M•"))
+	C(("•C•"))
+	H(("•H•"))
+	T(("•T•"))
+	AB(("A,B"))
+	DE(("D,E"))
+	G(("G"))
+	IL(("I,L"))
+	O(("O"))
+	WX(("W,X"))
+	
+	FM --> C & H & T
+	C --> AB & DE
+	H --> G & IL
+	T --> O & WX
 ```
 ---
 Also, See [[DBMS Mid Solution]].
+GHILMOTWX
