@@ -1,6 +1,7 @@
 ### Question 1
 ###### a. Briefly describe the operation of Data Encapsulation using a diagram.<span style="float: right; ">4</span>  
-**Ans:**   
+**Ans:**  To send a message from one process to another, the transport-layer protocol encapsulates and decapsulates messages. Encapsulation happens at the sender site. When a process has a message to send, it passes the message to the transport layer along with a pair of socket addresses and some other pieces of information, which depend on the transport-layer protocol. The transport layer receives the data and adds the transport-layer header. The packets at the transport layer in the Internet are called user datagrams, segments, or packets, depending on what transport-layer protocol we use. In general discussion, we refer to transport-layer payloads as packets.
+![[Encapsulation.png]]
 ###### b.  <span style="float: right; ">4</span>
 1. **Differentiate between guided media and unguided media.**  
    For **guided media**, electromagnetic waves are guided along a solid medium, such as copper twisted pair, copper coaxial cable, and optical fiber. For **unguided media**, wireless transmission occurs through the atmosphere, outer space, or water[^1].
@@ -130,7 +131,8 @@ $$
    $$
 ### Question 3
 ###### a. Briefly describe the operation of Data Encapsulation using a diagram. <span style="float: right; ">5</span>  
-**Ans:**  
+**Ans:**  To send a message from one process to another, the transport-layer protocol encapsulates and decapsulates messages. Encapsulation happens at the sender site. When a process has a message to send, it passes the message to the transport layer along with a pair of socket addresses and some other pieces of information, which depend on the transport-layer protocol. The transport layer receives the data and adds the transport-layer header. The packets at the transport layer in the Internet are called user datagrams, segments, or packets, depending on what transport-layer protocol we use. In general discussion, we refer to transport-layer payloads as packets.
+![[Encapsulation.png]]
 
 ###### b. Find the digital encoding for the following digital data: <span style="float: right; ">6</span>  
 $$
@@ -257,6 +259,9 @@ $$
    32^{nd}\text{ Host} \to &\text{ 181.193.224.32}
    \end{aligned}
    $$
+###### b. <span style="float: right; ">3</span>
+1. **Define Unicast, Multicast, Broadcast addresses with example.**  
+   
 [^1]: Data and Computer Communication, Stallings, 8th Edition
 
 [^2]: Data Communications and Networking, Forouzan, 5th Edition
