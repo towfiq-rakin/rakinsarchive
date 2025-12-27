@@ -1,6 +1,6 @@
 ### Question 1
 ###### a. Briefly describe the operation of Data Encapsulation using a diagram.<span style="float: right; ">4</span>  
-**Ans:**  To send a message from one process to another, the transport-layer protocol encapsulates and decapsulates messages. Encapsulation happens at the sender site. When a process has a message to send, it passes the message to the transport layer along with a pair of socket addresses and some other pieces of information, which depend on the transport-layer protocol. The transport layer receives the data and adds the transport-layer header. The packets at the transport layer in the Internet are called user datagrams, segments, or packets, depending on what transport-layer protocol we use. In general discussion, we refer to transport-layer payloads as packets.
+**Ans:**  To send a message from one process to another, the transport-layer protocol encapsulates and decapsulates messages. Encapsulation happens at the sender site. When a process has a message to send, it passes the message to the transport layer along with a pair of socket addresses and some other pieces of information, which depend on the transport-layer protocol. The transport layer receives the data and adds the transport-layer header. The packets at the transport layer in the Internet are called user datagrams, segments, or packets, depending on what transport-layer protocol we use. In general discussion, we refer to transport-layer payloads as packets[^2].
 ![[Encapsulation.png]]
 ###### b.  <span style="float: right; ">4</span>
 1. **Differentiate between guided media and unguided media.**  
@@ -261,7 +261,13 @@ $$
    $$
 ###### b. <span style="float: right; ">3</span>
 1. **Define Unicast, Multicast, Broadcast addresses with example.**  
-   
+   In a **unicast** transmission, all stations will receive the frame, the intended recipient keeps and handles the frame; the rest discard it.  
+   Example: 4A:30:10:21:10:1A  
+   In a **multicast** transmission, all stations will receive the frame, the stations that are members of the group keep and handle it; the rest discard it.
+   Example: 47:20:1B:2E:08:EE  
+   In a **broadcast** transmission, all stations (except the sender) will receive the frame and all stations (except the sender) keep and handle it.  
+   Example: FF:FF:FF:FF:FF:FF
+2. **From the following addresses find the unicast, multicast, and broadcast address.**
 [^1]: Data and Computer Communication, Stallings, 8th Edition
 
 [^2]: Data Communications and Networking, Forouzan, 5th Edition
