@@ -267,7 +267,7 @@ $$
    Example: 47:20:1B:2E:08:EE  
    In a **broadcast** transmission, all stations (except the sender) will receive the frame and all stations (except the sender) keep and handle it.  
    Example: FF:FF:FF:FF:FF:FF
-2. **From the following addresses find the unicast, multicast, and broadcast address.**
+2. **From the following addresses find the unicast, multicast, and broadcast address.**  
 [^1]: Data and Computer Communication, Stallings, 8th Edition
 
 [^2]: Data Communications and Networking, Forouzan, 5th Edition
