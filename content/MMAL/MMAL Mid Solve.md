@@ -113,11 +113,11 @@ MOV AX, BX               ; Store the sum of Series in AX
 **Ans:**
 1. 
 ```asm
-AND AX, 1010101010101010    ; AND 0 -> Clear
+AND AX, 1010101010101010b    ; AND 0 -> Clear
 ```
 2. 
 ```asm
-AND AL, 01111111            ; AND 0 -> Clear
+AND AL, 01111111b            ; AND 0 -> Clear
 ```
 
 ###### c.  What are the flag conditions of `JG`, `JNZ` and `JC`?<span style="float: right; ">02</span>
@@ -181,7 +181,7 @@ Thus the range of 4-bit signed number is from $7\text{ to }-8$.
 ### Question 5
 ###### a. Explain `SHL` and `SHL` instructions mentioning the syntax with proper example.<span style="float: right; ">05</span>
 **Ans:** 
-**`SHL`** 
+**`SHL`**   
 The `SHL` (shift left) instruction shifts the bits in the destination to the left. The format for a single shift is:
 ```asm
 SHL destination, 1
@@ -198,7 +198,7 @@ MOV CL, 3
 SHL AL, CL
 ```
 ![[SHL.png]]
-**`SHR`** 
+**`SHR`**   
 The `SHR` (shift right) instruction shifts the bits in the destination to the right. The format for a single shift is:
 ```asm
 SHR destination, 1
