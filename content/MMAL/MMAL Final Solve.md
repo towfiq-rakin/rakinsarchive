@@ -138,27 +138,29 @@ HLT
 5. **`RLC R1`**  
    The `RLC` instruction rotates the bits to the left through the Carry Flag. The MSB moves into the Carry Flag, and the previous value of the Carry Flag moves into the LSB.   
    ![[RLC.png]]
-   After `RLC R1`
+   After `RLC R1`,  
    `R1` = $52H$   
    `CY` = $1$     
 ###### b. Show that the maximum external ROM size of 8051 microcontroller is $60KB$ and $64KB$ in different cases.<span style="float: right; ">08</span>  
-**Ans:**  The 8051 microcontroller architecture supports external memory expansion through a 16-bit address bus, allowing it to address external program memory (ROM) and external data memory (RAM). The maximum addressable external RAM size varies depending on the configuration and addressing mode used.
-1. **Maximum External RAM = 64KB**  
-   This maximum is achieved when using external data memory access only, without any internal ROM utilization for program storage. A 16-bit address bus allows the processor to access $2^{16}$ unique memory locations ($65,536\text{ bytes}\text{ or 64KB}$). Using the instruction `MOVX A, @DPTR` or `MOVX @DPTR, A`, the controller can interface with the full range of external RAM from $0000\text{H}$ to $FFFF\text{H}$.  
-   ```
-   Address bus width = 16 bits 
-   Maximum addressable locations = 2^16 = 65,536 locations 
-   Each location = 1 byte 
-   Maximum external RAM = 65,536 bytes = 64KB
-   ```
-   
-2. **Maximum External RAM = 60KB**  
-   This constraint applies when the microcontroller uses on-chip program memory and certain address space is reserved for internal operations. Standard 8051 variants contain $4\text{ KB}$ of internal ROM ($0000\text{H}$ to $0FFF\text{H}$). When the **External Access (EA)** pin is held high ($V_{CC}$), the processor executes instructions from the $4\text{ KB}$ internal ROM first. Internal ROM occupies $0000H$ to $0FFFH$ $(4KB)$ from $64KB$ RAM. This configuration affects the practical external RAM usage$(64\text{ KB} - 4\text{ KB} = \mathbf{60\text{ KB}})$.  
-   ```
-   Total addressable external RAM space = 64KB
-   Reserved/Internal space = 4KB 
-   Available external RAM = 64KB - 4KB = 60KB
-   ```
+**Ans:**  The 8051 microcontroller architecture supports external memory expansion through a 16-bit address bus, allowing it to address external program memory (ROM) and external data memory (RAM). The maximum addressable external ROM size varies depending on the hardware configuration and the status of the External Access (EA) pin.
+
+1. **Maximum External ROM = 64KB**   
+   This maximum is achieved when the internal ROM is bypassed entirely. When the **External Access (EA)** pin is connected to ground ($EA = 0$), the microcontroller ignores its internal memory and fetches all instructions from the external ROM starting at address $0000\text{H}$. A 16-bit address bus allows the processor to access $2^{16}$ unique memory locations.
+
+```
+Address bus width = 16 bits 
+Maximum addressable locations = 2^16 = 65,536 locations 
+Each location = 1 byte 
+Maximum external ROM = 65,536 bytes = 64KB
+```
+
+2. **Maximum External ROM = 60KB**   
+   This constraint applies when the microcontroller utilizes its on-chip program memory alongside external expansion. Standard 8051 variants contain $4\text{ KB}$ of internal ROM located at addresses $0000\text{H}$ to $0FFF\text{H}$. When the **External Access (EA)** pin is held high ($EA = 1$), the processor executes instructions from the $4\text{ KB}$ internal ROM first. The microcontroller only switches to the external bus for addresses $1000\text{H}$ and above, effectively leaving $60\text{ KB}$ of accessible external program space ($64\text{ KB} - 4\text{ KB} = 60\text{ KB}$).
+```
+Total addressable code space = 64KB
+Internal ROM space (EA=1) = 4KB 
+Available external ROM = 64KB - 4KB = 60KB
+```
 
 With **$\overline{EA}= HIGH$** (Internal ROM enabled):  
 ![[60KB.png]]
@@ -175,3 +177,54 @@ With **$\overline{EA}= LOW$** (External ROM only):
 | Higher power consumption                        | Lower power consumption                  |
 ### Question 5
 ###### a. Demonstrate how memory is interfaced in 8051 micrcontroller with diagram.<span style="float: right; ">10</span>  
+
+### Question 6
+##### a. With proper diagrams, explain the special function registers (SFR) of  a 8051 microcontroller.<span style="float: right; ">10</span>  
+**Ans:** Special Function Register (SFR) sits on top of 128 byte RAM of 8051 starting from memory location $80H$ to $FFH$. Total size of SRF is also 128 bytes.  
+![[SFR.png]] 
+SFR contains registers like microprocessor.  
+1. **Accumulator (A & B)**  
+   Performs math and logical operations. Mainly works A, involves B for multiplication and division.
+   
+| Register | Size  | Location |
+| -------- | ----- | -------- |
+| A        | 8 bit | $EOH$    |
+| B        | 8 bit | $FOH$    |
+2. **Status Register (Flag)**  
+   Size = 8 Bit
+   Address = $DOH$
+
+| CY    | AX       | FO       | RS1  | RS0  | OV       | -   | P      |
+| ----- | -------- | -------- | ---- | ---- | -------- | --- | ------ |
+| Carry | Auxilary | Ext. Ram | Bank | Bank | Overflow |     | Parity |
+
+| RS1 | RS0 |  Bank   |
+| :-: | :-: | :-----: |
+|  0  |  0  | $B_{0}$ |
+|  0  |  1  | $B_{1}$ |
+|  1  |  0  | $B_{2}$ |
+|  1  |  1  | $B_{3}$ |
+
+3. **Pointer Register**  
+   To indicate CPU which Bank we are using.
+   $DPH \to$ Higher Bank ($B_{2},B_{3}$) $83H$
+   $DPL \to$ Lower Bank ($B_{0},B_{1}$) $82H$
+4. **Stack Pointer**
+   Address = $81H$
+5. **I/O Port Register**  
+   8 Bit Each
+   $P_{0} \to 80H$  
+   $P_{1} \to 90H$  
+   $P_{2} \to A0H$  
+   $P_{3} \to B0H$  
+###### b. Draw the block diagram of a 8051 Microcontroller.<span style="float: right; ">08</span>  
+![[8051_architecture.jpg]]
+###### c. Distinguish between RAM and ROM of 8051 microcontroller. <span style="float: right; ">02</span>  
+
+| ROM                                 | RAM                   |
+| ----------------------------------- | --------------------- |
+| Read only memory                    | Random access memory  |
+| Program memory                      | Data memory           |
+| 4KB ROM                             | 128 Byte RAM          |
+| $\overline{EA}$ pin works under ROM | Not functional in RAM |
+| Non Volatile                        | Volatile              |
