@@ -106,8 +106,10 @@ HLT
 ###### a. Suppose, `R1` contains `64H`, `CY=1`. What will be the value of `R1` and `CY` after each successive instruction is executed:<span style="float: right; ">10</span>  
 1. **`RR R1`**
 2. **`RRC R1`** 
-3. **`INC R1`**   
-
+3. **`INC R1`** 
+4. **`SWAP R1`**
+5. **`RLC R1`** 
+   
 **Ans:**  
 1. **`RR R1`**  
    The `RR` instruction rotates the bits of the register to the right. The Least Significant Bit (LSB) moves to the Most Significant Bit (MSB) position.  
@@ -117,4 +119,59 @@ HLT
    `CY`= $1$ (Unchanged)   
    .
 2. **`RRC R1`**  
+   The `RRC` instruction rotates the bits to the right through the Carry Flag. The LSB moves into the Carry Flag, and the previous value of the Carry Flag moves into the MSB.  
+   ![[RRC.png]]After `RRC R1`,  
+   `R1` = $99H$  
+   `CY` = $0$   
+   .
+
+3. **`INC R1`**  
+   The `INC` instruction adds 1 to the current value of the register.  
+   `R1` = $99H+1H=9AH$   
+   `CY` = $0$   
+   .
+4. **`SWAP R1`**
+   The `SWAP` instruction swaps the lower $4\space bit$ with higher $4\space bit$ .
+   `R1` = $A9H$   
+   `CY` = $0$   (Doesn't effect carry flag)  
+   .
+5. **`RLC R1`**  
+   The `RLC` instruction rotates the bits to the left through the Carry Flag. The MSB moves into the Carry Flag, and the previous value of the Carry Flag moves into the LSB.   
+   ![[RLC.png]]
+   After `RLC R1`
+   `R1` = $52H$   
+   `CY` = $1$     
+###### b. Show that the maximum external ROM size of 8051 microcontroller is $60KB$ and $64KB$ in different cases.<span style="float: right; ">08</span>  
+**Ans:**  The 8051 microcontroller architecture supports external memory expansion through a 16-bit address bus, allowing it to address external program memory (ROM) and external data memory (RAM). The maximum addressable external RAM size varies depending on the configuration and addressing mode used.
+1. **Maximum External RAM = 64KB**  
+   This maximum is achieved when using external data memory access only, without any internal ROM utilization for program storage. A 16-bit address bus allows the processor to access $2^{16}$ unique memory locations ($65,536\text{ bytes}\text{ or 64KB}$). Using the instruction `MOVX A, @DPTR` or `MOVX @DPTR, A`, the controller can interface with the full range of external RAM from $0000\text{H}$ to $FFFF\text{H}$.  
+   ```
+   Address bus width = 16 bits 
+   Maximum addressable locations = 2^16 = 65,536 locations 
+   Each location = 1 byte 
+   Maximum external RAM = 65,536 bytes = 64KB
+   ```
    
+2. **Maximum External RAM = 60KB**  
+   This constraint applies when the microcontroller uses on-chip program memory and certain address space is reserved for internal operations. Standard 8051 variants contain $4\text{ KB}$ of internal ROM ($0000\text{H}$ to $0FFF\text{H}$). When the **External Access (EA)** pin is held high ($V_{CC}$), the processor executes instructions from the $4\text{ KB}$ internal ROM first. Internal ROM occupies $0000H$ to $0FFFH$ $(4KB)$ from $64KB$ RAM. This configuration affects the practical external RAM usage$(64\text{ KB} - 4\text{ KB} = \mathbf{60\text{ KB}})$.  
+   ```
+   Total addressable external RAM space = 64KB
+   Reserved/Internal space = 4KB 
+   Available external RAM = 64KB - 4KB = 60KB
+   ```
+
+With **$\overline{EA}= HIGH$** (Internal ROM enabled):  
+![[60KB.png]]
+With **$\overline{EA}= LOW$** (External ROM only):
+![[64KB.png]]
+###### c. Distinguish between Microprocessor and Microcontroller. <span style="float: right; ">02</span>  
+**Ans:** 
+
+| Microprocessor                                  | Microcontroller                          |
+| ----------------------------------------------- | ---------------------------------------- |
+| CPU is stand-alone. RAM, ROM, I/O are separate. | CPU, RAM, ROM, I/O are on a single chip. |
+| Generally  large in size.                       | Small and compact                        |
+| More expensive                                  | Cheaper than Microprocessor              |
+| Higher power consumption                        | Lower power consumption                  |
+### Question 5
+###### a. Demonstrate how memory is interfaced in 8051 micrcontroller with diagram.<span style="float: right; ">10</span>  
