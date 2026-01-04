@@ -181,7 +181,7 @@ With **$\overline{EA}= LOW$** (External ROM only):
 ### Question 6
 ##### a. With proper diagrams, explain the special function registers (SFR) of  a 8051 microcontroller.<span style="float: right; ">10</span>  
 **Ans:** Special Function Register (SFR) sits on top of 128 byte RAM of 8051 starting from memory location $80H$ to $FFH$. Total size of SRF is also 128 bytes.  
-![[SFR.png]] 
+![[SFR.png]]   
 SFR contains registers like microprocessor.  
 1. **Accumulator (A & B)**  
    Performs math and logical operations. Mainly works A, involves B for multiplication and division.
@@ -206,13 +206,13 @@ SFR contains registers like microprocessor.
 |  1  |  1  | $B_{3}$ |
 
 3. **Pointer Register**  
-   To indicate CPU which Bank we are using.
-   $DPH \to$ Higher Bank ($B_{2},B_{3}$) $83H$
+   To indicate CPU which Bank we are using.  
+   $DPH \to$ Higher Bank ($B_{2},B_{3}$) $83H$  
    $DPL \to$ Lower Bank ($B_{0},B_{1}$) $82H$
-4. **Stack Pointer**
+4. **Stack Pointer**  
    Address = $81H$
 5. **I/O Port Register**  
-   8 Bit Each
+   8 Bit Each  
    $P_{0} \to 80H$  
    $P_{1} \to 90H$  
    $P_{2} \to A0H$  
