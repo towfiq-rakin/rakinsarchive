@@ -6,4 +6,5 @@ Academic writtings of [Towfiq Omar Rakin](https://rakin.me)
 
 ### 3-1 Academic Writtings
 #### Operating Systems
+- [Deadlock](Deadlock.md)
 - [Memory Management](Memory-Management.md)
