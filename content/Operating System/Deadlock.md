@@ -58,3 +58,45 @@ The first solution is the one used by most operating systems, including Linux an
  
 **Deadlock prevention** provides a set of methods to ensure that at least one of the necessary conditions cannot hold.  
 **Deadlock avoidance** requires that the operating system be given additional information in advance concerning which resources a thread will request and use during its lifetime.
+
+### Deadlock Prevention
+For a deadlock to occur, each of the four necessary conditions must hold. By ensuring that at least one of these conditions cannot hold, we can prevent the occurrence of a deadlock.  
+
+**Mutual Exclusion**  
+The mutual-exclusion condition must hold. That is, at least one resource must be non shareable. Shareable resources do not require mutually exclusive access and thus cannot be involved in a deadlock. Read-only files are a good example of a shareable resource.  
+
+**Hold and Wait**  
+To ensure that the hold-and-wait condition never occurs in the system, we must guarantee that, whenever a thread requests a resource, it does not hold any other resources. One protocol that we can use requires each thread to request and be allocated all its resources before it begins execution.  
+An alternative protocol allows a thread to request resources only when it has none.  
+
+**No Preemption**  
+If a thread is holding some resources and requests another resource that cannot be immediately allocated to it (that is, the thread must wait), then all resources the thread is currently holding are preempted. In other words, these resources are implicitly released.  
+Alternatively, if a thread requests some resources, we first check whether they are available. If they are, we allocate them. If they are not, we check whether they are allocated to some other thread that is waiting for additional resources. If so, we preempt the desired resources from the waiting thread and allocate them to the requesting thread.  
+This protocol is often applied to resources whose state can be easily saved and restored later, such as CPU registers and database transactions.  
+
+**Circular Wait**   
+Impose a total ordering of all resource types, and require that each thread requests resources in an increasing order of enumeration.
+
+### Deadlock Avoidance
+The various algorithms that use this approach differ in the amount and type of information required. The simplest and most useful model requires that each thread declare the maximum number of resources of each type that it may need. Given this a priori information, it is possible to construct an algorithm that ensures that the system will never enter a deadlocked state.  
+
+###### 1. Safe State
+A state is safe if the system can allocate resources to each thread (up to its maximum) in some order and still avoid a deadlock. Formally, a state is safe only if there exists a **safe sequence** of threads $\langle T_1, T_2, \dots, T_n \rangle$.
+###### 2. Resource-Allocation Graph Scheme
+This deadlock avoidance algorithm is typically used when a system has only a **single instance** of each resource type. It extends the standard resource-allocation graph by introducing a new type of edge called a **claim edge**.
+1. A claim edge $T_i \rightarrow R_j$ indicates that thread $T_i$ may request resource $R_j$ at some time in the future. This edge resembles a request edge but is represented by a dashed line.
+2. When a thread $T_i$ requests resource $R_j$, the claim edge $T_i \rightarrow R_j$ is converted to a request edge. Similarly, when a resource $R_j$ is released by $T_i$, the assignment edge $R_j \rightarrow T_i$ reconverts to a claim edge $T_i \rightarrow R_j$.
+3. The system checks for safety by attempting to convert the request edge into an assignment edge. The request can be granted only if doing so does not result in the formation of a cycle in the resource-allocation graph. If no cycle exists, the allocation leaves the system in a safe state; if a cycle is found, the allocation would put the system in an unsafe state.  
+
+![[Fig8.9.png]]  
+###### 3. Banker's Algorithm
+The Banker's Algorithm is a deadlock avoidance algorithm designed for systems with **multiple instances** of each resource type. It is less efficient than the resource-allocation graph scheme but necessary when resources have multiple instances. The name is derived from its use in banking systems to ensure the bank never allocates its available cash in a way that prevents it from satisfying the needs of all its customers.  
+- **Available**: A vector of length $m$ indicating the number of available instances of each resource type.
+- **Max**: An $n \times m$ matrix defining the maximum demand of each thread. $Max[i][j] = k$ means thread $T_i$ may request at most $k$ instances of resource type $R_j$.
+- **Allocation**: An $n \times m$ matrix defining the number of resources of each type currently allocated to each thread.
+- **Need**: An $n \times m$ matrix indicating the remaining resource need of each thread. $Need[i][j] = Max[i][j] - Allocation[i][j]$.
+
+**Algorithm Logic**: When a request is made, the system pretends to allocate the resources and then runs a **safety algorithm** to determine if the resulting state is safe. The safety algorithm checks if there is a sequence of all threads such that the available resources (plus those released by threads finishing earlier in the sequence) are sufficient to satisfy the `Need` of the next thread. If such a sequence exists, the request is granted; otherwise, the thread must wait.  
+![[BankerTable.png]]  
+
+We claim that the system is currently in a safe state. Indeed, the sequence $\langle T_{2},T_{4},T_{3},T_{5},T_{1}\rangle$ satisfies the safety criteria.
