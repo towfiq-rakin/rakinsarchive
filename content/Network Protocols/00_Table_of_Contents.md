@@ -6,13 +6,13 @@
 
 ## Document Information
 
-| Property              | Value                          |
-| --------------------- | ------------------------------ |
-| **Version**           | 1.0                            |
-| **Created**           | January 2026                   |
-| **Author**            | Network Analysis Documentation |
-| **Total Sections**    | 10                             |
-| **Estimated Reading** | 2-3 hours                      |
+| Property              | Value             |
+| --------------------- | ----------------- |
+| **Version**           | 1.0               |
+| **Created**           | January 2026      |
+| **Author**            | Towfiq Omar Rakin |
+| **Total Sections**    | 10                |
+| **Estimated Reading** | 2-3 hours         |
 
 ---
 
