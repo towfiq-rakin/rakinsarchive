@@ -658,5 +658,5 @@ Resolve-DnsName -Type MX example.com    # MX records
 
 ---
 
-_Previous: [[05_Layer4_UDP_and_Ports]]_
-_Next: [[07_Layer7_HTTP_HTTPS]]_
+_Previous: [[05 UDP and Ports]]_
+_Next: [[07 HTTP, HTTPS]]_

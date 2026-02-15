@@ -617,4 +617,4 @@ Packet 4: Timestamp=480   (320 + 160)
 
 ## Navigation
 
-**Previous:** [[08_Layer7_Other_Protocols]] | **Next:** [[10_Wireshark_Cheatsheet]] | **Home:** [[00_Table_of_Contents]]
+**Previous:** [[08 Other Protocols]] | **Next:** [[10 Wireshark]] | **Home:** [[00 Table of Contents]]

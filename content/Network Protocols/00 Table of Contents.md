@@ -22,31 +22,31 @@
 
 | File                          | Section                  | Description                           |
 | ----------------------------- | ------------------------ | ------------------------------------- |
-| [[01_Introduction_OSI_Model]] | Introduction & OSI Model | Visual layer breakdown, encapsulation |
-| [[02_Layer2_Data_Link]]       | Layer 2 Protocols        | Ethernet, ARP, MAC addressing, STP    |
-| [[03_Layer3_Network]]         | Layer 3 Protocols        | IPv4/IPv6, ICMP, subnetting           |
+| [[01 Introduction OSI Model]] | Introduction & OSI Model | Visual layer breakdown, encapsulation |
+| [[02 Data Link]]       | Layer 2 Protocols        | Ethernet, ARP, MAC addressing, STP    |
+| [[03 Network]]         | Layer 3 Protocols        | IPv4/IPv6, ICMP, subnetting           |
 
 ### Part 2: Transport Layer Deep Dive
 
 | File                        | Section            | Description                          |
 | --------------------------- | ------------------ | ------------------------------------ |
-| [[04_Layer4_TCP_Deep_Dive]] | TCP Protocol       | 3-way handshake, flags, flow control |
-| [[05_Layer4_UDP_and_Ports]] | UDP & Port Numbers | UDP structure, port reference        |
+| [[04 TCP]] | TCP Protocol       | 3-way handshake, flags, flow control |
+| [[05 UDP and Ports]] | UDP & Port Numbers | UDP structure, port reference        |
 
 ### Part 3: Application Layer Deep Dive
 
 | File                          | Section              | Description                          |
 | ----------------------------- | -------------------- | ------------------------------------ |
-| [[06_Layer7_DNS]]             | DNS Protocol         | Query types, records, resolution     |
-| [[07_Layer7_HTTP_HTTPS]]      | HTTP/HTTPS & TLS     | Methods, status codes, TLS handshake |
-| [[08_Layer7_Other_Protocols]] | DHCP, FTP, SSH, SMTP | Other application protocols          |
+| [[06 DNS]]             | DNS Protocol         | Query types, records, resolution     |
+| [[07 HTTP, HTTPS]]      | HTTP/HTTPS & TLS     | Methods, status codes, TLS handshake |
+| [[08 Other Protocols]] | DHCP, FTP, SSH, SMTP | Other application protocols          |
 
 ### Part 4: VoIP & Practical Analysis
 
 | File                        | Section             | Description             |
 | --------------------------- | ------------------- | ----------------------- |
-| [[09_VoIP_Protocols]]       | VoIP Protocols      | SIP, RTP, RTCP, SDP     |
-| [[10_Wireshark_Cheatsheet]] | Wireshark Reference | Filters, tips, analysis |
+| [[09 VoIP Protocols]]       | VoIP Protocols      | SIP, RTP, RTCP, SDP     |
+| [[10 Wireshark]] | Wireshark Reference | Filters, tips, analysis |
 
 ---
 
@@ -116,4 +116,4 @@ Layer 1 (Physical)
 
 ---
 
-_Continue to: [[01_Introduction_OSI_Model]]_
+_Continue to: [[01 Introduction OSI Model]]_

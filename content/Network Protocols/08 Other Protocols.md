@@ -628,5 +628,5 @@ IMAP CONVERSATION
 
 ---
 
-_Previous: [[07_Layer7_HTTP_HTTPS]]_
-_Next: [[09_VoIP_Protocols]]_
+_Previous: [[07 HTTP, HTTPS]]_
+_Next: [[09 VoIP Protocols]]_

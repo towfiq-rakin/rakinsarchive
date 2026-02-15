@@ -522,5 +522,5 @@ Capture filters are applied **DURING** capture to reduce file size. They use Ber
 
 ---
 
-_Previous: [[04_Layer4_TCP_Deep_Dive]]_
-_Next: [[06_Layer7_DNS]]_
+_Previous: [[04 TCP]]_
+_Next: [[06 DNS]]_

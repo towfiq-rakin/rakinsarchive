@@ -10,7 +10,7 @@ Academic writings and technical notes by [Towfiq Omar Rakin](https://rakin.me)
 
 A comprehensive guide for network engineers and security analysts covering OSI layers, protocol analysis, and Wireshark techniques.
 
-**[[Network Protocols/00_Table_of_Contents|View Full Guide]]**
+**[[00 Table of Contents|View Full Guide]]**
 
 | Section           | Topics                                    |
 | ----------------- | ----------------------------------------- |

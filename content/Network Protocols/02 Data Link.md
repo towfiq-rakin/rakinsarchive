@@ -523,4 +523,4 @@ WITHOUT VLANs:                          WITH VLANs:
 
 ---
 
-_Next: [[03_Layer3_Network]] - IPv4/IPv6, ICMP, Subnetting_
+_Next: [[03 Network]] - IPv4/IPv6, ICMP, Subnetting_

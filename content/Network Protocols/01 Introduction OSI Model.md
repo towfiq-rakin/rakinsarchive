@@ -377,4 +377,4 @@ Each expandable section corresponds to a layer's header information.
 
 ---
 
-_Next: [[02_Layer2_Data_Link|Section 2: Layer 2 - Data Link]] - Ethernet, ARP, MAC Addressing_
+_Next: [[02 Data Link|Section 2: Layer 2 - Data Link]] - Ethernet, ARP, MAC Addressing_

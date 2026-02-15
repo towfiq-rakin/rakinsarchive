@@ -615,5 +615,5 @@ HTTP/2 FRAME
 
 ---
 
-_Previous: [[06_Layer7_DNS]]_
-_Next: [[08_Layer7_Other_Protocols]]_
+_Previous: [[06 DNS]]_
+_Next: [[08 Other Protocols]]_
