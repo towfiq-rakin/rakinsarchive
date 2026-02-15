@@ -215,8 +215,6 @@ The service gives:
 and asks for the next 5 **full 64-bit** states.
 
 #### Given RNG
-From [fortune_revenge.py](fortune_revenge.py):
-
 - $M = 2^{64}$
 - $A = 2862933555777941757$
 - $C = 3037000493$
