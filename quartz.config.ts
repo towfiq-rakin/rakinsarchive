@@ -91,11 +91,8 @@ const config: QuartzConfig = {
       Plugin.CNAME(),
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
-
     ],
   },
-  
 }
 
 export default config
-
