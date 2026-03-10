@@ -30,9 +30,6 @@ jobs:
       - name: Build Quartz Site
         run: npx quartz build
 
-      - name: Setup GCS Route Redirects
-        run: node gcs-router.mjs
-
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
