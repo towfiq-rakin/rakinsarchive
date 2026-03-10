@@ -30,6 +30,9 @@ jobs:
       - name: Build Quartz Site
         run: npx quartz build
 
+      - name: Prepare Extensionless Files
+        run: node gcs-rename.mjs
+
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
@@ -43,3 +46,9 @@ jobs:
         # The -m flag enables parallel uploads, -d deletes files in the bucket that don't exist in the build, and -r is recursive.
         run: |
           gsutil -m rsync -r -d public/ gs://archive.rakin.me/
+
+      - name: Set Content-Type for Extensionless Files
+        run: |
+          if [ -s extensionless_files.txt ]; then
+            cat extensionless_files.txt | xargs -n 50 gsutil -m setmeta -h "Content-Type: text/html"
+          fi
