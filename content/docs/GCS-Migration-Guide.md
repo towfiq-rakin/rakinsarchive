@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 # Hosting Quartz Site on Google Cloud Storage (GCS)
 
 This document roughly outlines the steps taken to migrate our Quartz-based digital garden (`archive.rakin.me`) from GitHub Pages / Cloudflare Pages to a Google Cloud Storage (GCS) bucket, while maintaining a custom domain and an automated CI/CD pipeline via GitHub Actions.
