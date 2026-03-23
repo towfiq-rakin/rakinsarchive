@@ -10,7 +10,7 @@ NOTE: The flag is fully lowercase!
 
 Attached file: `choppy.wav`
 ### Initial observations
-What a messy audio! That sounded like a scrambled random noise. I can do nothing by hearing the audio rather than hurting my ears! However, visualizing the audio via **spectrogram** may gave me some hints as the author mentioned about **scrambled song**. As a result I fired up ***ocenaudio*** (or you may use any audio editor) and got this:
+What a messy audio! That sounded like a scrambled random noise. I could have done nothing by hearing the audio other than straining my ears! However, visualizing the audio via **spectrogram** may have given me some hints as the author mentioned about **scrambled song**. As a result I fired up ***ocenaudio*** (or you may use any audio editor) and got this:
 
 ![[choppy_spectrogram_like.png]]
 
