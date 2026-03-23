@@ -5,7 +5,8 @@ title: Welcome to Rakin's Archive
 Academic writings and technical notes by [Towfiq Omar Rakin](https://rakin.me)
 
 ---
-
+## My newest writing
+CTF Challange writeup - [[Choppy]] from **TAMUctf 2026**
 ## Network Protocols
 
 A comprehensive guide for network engineers and security analysts covering OSI layers, protocol analysis, and Wireshark techniques.
