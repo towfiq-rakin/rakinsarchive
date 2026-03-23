@@ -54,3 +54,10 @@ A comprehensive guide for network engineers and security analysts covering OSI l
 ### Compiler Design
 
 - [[3-1/Compiler/Compiler Final Solve|Final Solve]]
+
+```cpp
+// Height = your height in inch
+// CGPA = Your overall CGPA
+
+Salami = max(0, Height-72) * max(0, CGPA-3.8) * 10
+```
