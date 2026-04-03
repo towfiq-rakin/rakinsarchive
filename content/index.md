@@ -10,6 +10,7 @@ Bachelor of Computer Science and Engineering -- [Bangladesh University of Profes
 
 ---
 ### My newest writing
+- Learn [[000|100 Days of DevOps]] with me!
 - Writeup - [[Choppy]] from **TAMUctf 2026**  
 - Writeup - [[DiceCTF 2026 Quals]]  
 - Writeup - [[0xFUN CTF 2026]]  
