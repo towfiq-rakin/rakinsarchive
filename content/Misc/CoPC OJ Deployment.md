@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 ---
 ## Architecture Documentation: Securing a Dockerized Web Application via Cloudflare mTLS and Nginx Reverse Proxy
 
