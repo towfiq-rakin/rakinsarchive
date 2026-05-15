@@ -1,6 +1,6 @@
-In this note, I will be documenting a LAN + WAN step-by-step configuration from beginning to end, effectively featuring fundamentals of basic Router Configuration, Classful IP addressing, Dynamic Routing, DHCP and VLAN.
+In this document, I will provide a step-by-step configuration guide for a LAN and WAN network topology. The configuration covers the fundamentals of router setup, classful IP addressing, dynamic routing, DHCP, VLAN creation, trunking, and inter-VLAN communication.
 
-The following topology will be used to demonstrate all the topics. It has 8 VLANs with 2 PCs in each and 2 Routers connected through a WAN.
+The topology used in this guide consists of 8 VLANs, with 2 PCs assigned to each VLAN. Two routers are connected through a WAN link, allowing communication between the VLANs on both sides of the network.
 
 ![[config.png]]
 
