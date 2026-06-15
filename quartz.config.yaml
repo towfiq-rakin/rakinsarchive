@@ -192,6 +192,7 @@ plugins:
   - source: github:quartz-community/reader-mode
     enabled: true
     layout:
+      display: desktop-only
       position: left
       priority: 35
       group: toolbar
@@ -216,7 +217,7 @@ plugins:
         GitHub: https://github.com/towfiq-rakin
         LinkedIn: https://www.linkedin.com/in/towfiq-rakin/
   - source: github:quartz-community/recent-notes
-    enabled: true
+    enabled: false
     options:
       limit: 5
       showTags: false
