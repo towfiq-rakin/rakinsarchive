@@ -370,3 +370,29 @@ graph TD
     Model -.->|View Reads Updated State| View
 ```
 
+### Lec-14: Planning & Scheduling
+**Critical Path Method (CPM)**: A network analysis technique used for planning and controlling complex but routine projects. It is specifically used when project task durations and resource requirements are known with certainty. 
+
+**Four Key Elements**: CPM involves four core calculations: Critical Path Analysis, Float Determination, Early Start/Early Finish tracking, and Late Start/Late Finish tracking.
+**Core Task Parameters**:
+- **Earliest Start (ES)**: The earliest time a successor activity can begin once its predecessor finishes.
+- **Earliest Finish (EF)**: The earliest a task can end, calculated as **ES + Task Duration**.
+- **Latest Finish (LF)**: The latest time an activity can complete without pushing back the overall project deadline.
+- **Latest Start (LS)**: The latest time a task can begin, calculated as **LF - Task Duration**.
+
+ **Float / Slack Time**: The amount of time an individual activity can slide or be delayed before it causes a delay to the overall project. It is determined by calculating **LS - ES** (or **LF - EF**). Crucially, any task situated on the critical path has a float time of exactly zero.
+
+>[!question] What is Critical Path?
+>The **Critical Path** is the continuous sequence of dependent project activities that yields the longest combined duration from start to finish. It defines the minimum, absolute baseline duration required to execute the entire project.
+
+>[!question] Why do we need Critical Path?
+>Project managers utilize the critical path schedule to achieve three main objectives:
+>- **Prevent Project Delays**: It explicitly flags zero-slack activities that must be completed on time. A delay in any task on this path instantly creates a cascading delay for the entire project.
+>- **Identify Delay Flexibility**: It maps out exactly which non-critical tasks possess **float (slack)**, showing how long those specific items can be safely delayed without shifting the final completion date.
+>- **Optimize Timelines**: It provides a mathematically verified calculation of the shortest possible execution schedule and determines the strict earliest/latest bounds for every task's start date.
+
+### Lec-15: Software Usability
+*Coming Soon!!!*
+
+### Lec-16: Documentation & Coding Standards
+*Coming Soon!!!*
