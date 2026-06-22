@@ -392,7 +392,78 @@ graph TD
 >- **Optimize Timelines**: It provides a mathematically verified calculation of the shortest possible execution schedule and determines the strict earliest/latest bounds for every task's start date.
 
 ### Lec-15: Software Usability
-*Coming Soon!!!*
+*Coming Soon, maybe :(*
 
 ### Lec-16: Documentation & Coding Standards
-*Coming Soon!!!*
+
+**Types of Documentation**
+
+| Category      | Examples                                         |
+| ------------- | ------------------------------------------------ |
+| **Written**   | README, tutorials, reference guides, design docs |
+| **Code**      | API docs, comments, example code, unit tests     |
+| **Community** | Stack Overflow, blogs, forums, talks             |
+
+**Big ones:** API-generated docs · project-level docs · how-to guides · user docs
+
+**Coding Standards vs. Conventions**
+
+- **Standards** → _must_ be followed (rules)
+- **Conventions** → _should_ be followed (guidelines)
+
+**Why?** Less bugs · easier maintenance · better teamwork · lower cost
+
+**Naming Conventions _(C# / Microsoft guidelines)_**
+
+```csharp
+public class OrderService { }      // PascalCase → class, method, property
+void processOrder() { }            // camelCase  → local var, parameter
+private int _retryCount;           // _camelCase → private field
+public interface IRepository { }   // I-prefix   → interface
+```
+
+**Layout & Comments**
+
+```csharp
+// Consistent indentation, one statement per line
+if (x > 0)
+{
+    y = x * 2;
+}
+
+// Explain WHY, not WHAT
+// Retry 3× — upstream API is flaky on first call
+for (int i = 0; i < MAX_RETRIES; i++) { ... }
+
+// Useless comment
+counter++; // increment counter
+```
+
+**Member order:** Fields → Properties → Constructors → Public methods → Private methods
+
+**XML Documentation (C#)**
+
+```xml
+/// <summary>Adds two integers and returns their sum.</summary>
+/// <param name="a">Left operand.</param>
+/// <param name="b">Right operand.</param>
+/// <returns>Sum of a and b.</returns>
+/// <remarks>Both operands must be non-negative.</remarks>
+public static int Add(int a, int b) => a + b;
+```
+
+**Documentation Generators**
+
+|Language|Tool|
+|---|---|
+|C#|DocFX, Sandcastle|
+|Java|Javadoc|
+|Python|Sphinx|
+
+Parse code + doc-comments → auto-generate HTML/PDF API reference.
+
+**Community Docs**
+Bug trackers, Stack Overflow, blogs, forums, talks, conferences.
+
+> Over time, community docs often become the _most valuable_ resource — users add vocabulary the original authors never thought of.
+
