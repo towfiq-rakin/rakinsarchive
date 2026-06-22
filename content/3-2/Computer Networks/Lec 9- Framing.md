@@ -49,3 +49,6 @@ section of a frame is a sequence of bits.
 section of the frame when there is a sequence of bits with the same pattern as
 the flag.  
 ■ Flow control refers to a set of procedures used to restrict the amount of data that the sender can send before waiting for acknowledgment. Error control refers to methods of error detection and correction.
+
+
+
