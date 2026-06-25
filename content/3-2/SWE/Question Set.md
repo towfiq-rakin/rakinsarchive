@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 1. ~~Every Question will have Case Study~~
 2. ~~Sequence Diagram~~
 3. ~~Conceptual Questions~~
