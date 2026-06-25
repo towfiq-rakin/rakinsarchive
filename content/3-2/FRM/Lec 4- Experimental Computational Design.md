@@ -21,13 +21,13 @@
 
 These designs rely on less sophisticated analysis based primarily on differences in magnitudes.
 
-**Before-and-after without control**
+**Before-and-after without control**  
 Measures a single test group before ($X$) and after ($Y$) the treatment.
 $$
 \text{Treatment Effect} = Y - X
 $$
 _Drawback:_ Vulnerable to extraneous variations arising from the passage of time.  
-**After-only with control**
+**After-only with control**  
 Uses two separate groups (Test area $Y$ and Control area $Z$), but introduces treatment to the test area only.
 
 $$
@@ -36,7 +36,7 @@ $$
 
 _Drawback:_ Assumes both areas are completely identical in behavior prior to the experiment.
 
-**Before-and-after with control**
+**Before-and-after with control**  
 Measures both test ($X \rightarrow Y$) and control ($A \rightarrow Z$) groups over identical time periods, applying treatment only to the test group.
 $$
 \text{Treatment Effect} = (Y - X) - (Z - A)

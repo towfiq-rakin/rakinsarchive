@@ -1,7 +1,3 @@
-# GER-3209: Fundamentals of Research Methodology
-
-## Topic 06: Data Analysis (Complete Study Guide & Solved Problems)
-
 ## 1. Foundations of Measurement & Error Analysis
 
 ### Statistical Analysis
