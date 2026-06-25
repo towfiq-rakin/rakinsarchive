@@ -14,10 +14,11 @@
 - Must explain the facts.
 
 ### Basic Concepts of Hypothesis
-**Null Hypothesis ($H_{0}$)**: If method A is to be compared with method B with respect to superiority, and if it is assumed that both methods are equally good. 
-**Alternate Hypothesis ($H_{a}$)**: If method A is to be compared with method B with respect to superiority, and it is assumed that method A is superior or that method B is inferior. 
-**Population Mean ($\mu$)**: True average value of a variable. 
-**Hypothesized Mean ($\mu_{H_{0}}$)**: A specified value of population mean assumed for the purpose of statistical testing. 
+**Null Hypothesis ($H_{0}$)**: If method A is to be compared with method B with respect to superiority, and if it is assumed that both methods are equally good.  
+**Alternate Hypothesis ($H_{a}$)**: If method A is to be compared with method B with respect to superiority, and it is assumed that method A is superior or that method B is inferior.  
+**Population Mean ($\mu$)**: True average value of a variable.  
+**Hypothesized Mean ($\mu_{H_{0}}$)**: A specified value of population mean assumed for the purpose of statistical testing.  
+
 >[!note] Example
 >Suppose we want to test the hypothesis that the population mean ($\mu$) is equal to the hypothesized mean $(\mu_{H_{0}})=100$ .
 
@@ -35,7 +36,7 @@ If the level of significance is 5%, it means that the researcher is willing to t
 - A two tailed test rejects the null hypothesis if, the population mean is significantly higher or lower than the hypothesized mean.
 - A one tailed test would be used to test, say whether the population means is either higher or lower than some hypothesized value (only one rejection region).
 
-**Errors in testing of hypothesis** 
+**Errors in testing of hypothesis**  
 Type I error means rejection of hypothesis which should have been accepted and Type II error means accepting the hypothesis which should have been rejected.
 
 |                 |      Accept $H_0$       |     Reject $H_{0}$      |
@@ -66,15 +67,21 @@ Type I error means rejection of hypothesis which should have been accepted and T
 
 **Hypotheses:**
 
-$$H_0 : \mu \le \mu_{H_0} \quad \text{and} \quad H_a : \mu > \mu_{H_0}$$
+$$
+H_0 : \mu \le \mu_{H_0} \quad \text{and} \quad H_a : \mu > \mu_{H_0}
+$$
 
 Thus, the hypotheses become:
 
-$$H_0 : \mu \le 15 \quad \text{and} \quad H_a : \mu > 15$$
+$$
+H_0 : \mu \le 15 \quad \text{and} \quad H_a : \mu > 15
+$$
 
 This is a one-sided (right-tail) z-test. The test statistic is:
 
-$$Z = \frac{\bar{X} - \mu_{H_0}}{\sigma_p / \sqrt{n}}$$
+$$
+Z = \frac{\bar{X} - \mu_{H_0}}{\sigma_p / \sqrt{n}}
+$$
 
 For a right-tailed test at $\alpha = 10\% = 0.1$, the critical z-value is $z_{0.1} = 1.28$ _(From z-table)_.
 
@@ -82,9 +89,13 @@ For a right-tailed test at $\alpha = 10\% = 0.1$, the critical z-value is $z_{0.
 
 Accept $H_0$ if:
 
-$$\bar{X} \le \mu_{H_0} + Z \times \left(\frac{\sigma_p}{\sqrt{n}}\right)$$
+$$
+\bar{X} \le \mu_{H_0} + Z \times \left(\frac{\sigma_p}{\sqrt{n}}\right)
+$$
 
-$$\bar{X} \le 15 + 1.28 \times \left(\frac{5}{10}\right) \implies \bar{X} \le 15.6408$$
+$$
+\bar{X} \le 15 + 1.28 \times \left(\frac{5}{10}\right) \implies \bar{X} \le 15.6408
+$$
 
 **Decision Rule:**
 - **Accept $H_0$ if:** $\bar{x} \le 15.6408$ 
@@ -98,7 +109,10 @@ Since the sample mean $\bar{x} = 15.5$ satisfies $15.5 \le 15.6408$, **$H_0$ is 
 **Error Analysis at $\alpha = 10\%$:**
 - **Scenario A:** Suppose $H_0$ is really true. The sample results also accept $H_0$ in this case. So, the decision is correct and there is **no Type I error**.
 - **Scenario B:** Suppose $H_0$ is really false, but the sample results accept $H_0$. So, the decision is incorrect and results in a **Type II ($\beta$) error**.
-  $$\text{Here, } Z = \frac{15.6408 - 15.5}{5 / \sqrt{100}} = 0.2816$$
+
+$$
+\text{Here, } Z = \frac{15.6408 - 15.5}{5 / \sqrt{100}} = 0.2816
+$$
 For $Z = 0.2816$, **Type II error ($\beta$) = 0.611** _(From z-table)_.
 
 **Reference: Hypothesis Decision Matrix**
@@ -112,7 +126,9 @@ For $Z = 0.2816$, **Type II error ($\beta$) = 0.611** _(From z-table)_.
 
 **Hypotheses:**
 
-$$H_0 : \mu \le 15 \quad \text{and} \quad H_a : \mu > 15$$
+$$
+H_0 : \mu \le 15 \quad \text{and} \quad H_a : \mu > 15
+$$
 
 This remains a one-sided (right-tail) z-test with the same test statistic layout. For a right-tailed test at $\alpha = 20\% = 0.2$, the critical z-value is $z_{0.2} = 0.8416$ _(From z-table)_.
 
@@ -120,9 +136,13 @@ This remains a one-sided (right-tail) z-test with the same test statistic layout
 
 Accept $H_0$ if:
 
-$$\bar{X} \le \mu_{H_0} + Z \times \left(\frac{\sigma_p}{\sqrt{n}}\right)$$
+$$
+\bar{X} \le \mu_{H_0} + Z \times \left(\frac{\sigma_p}{\sqrt{n}}\right)
+$$
 
-$$\bar{X} \le 15 + 0.8416 \times \left(\frac{5}{10}\right) \implies \bar{X} \le 15.4208$$
+$$
+\bar{X} \le 15 + 0.8416 \times \left(\frac{5}{10}\right) \implies \bar{X} \le 15.4208
+$$
 
 **Decision Rule:**
 - **Accept $H_0$ if:** $\bar{x} \le 15.4208$
