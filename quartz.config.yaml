@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Rakin's Archive
-  pageTitleSuffix: ""
+  pageTitle: Milk Candy
+  pageTitleSuffix: "i love milkcandy, but i don't eat milkcandy"
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: archive.rakin.me
+  baseUrl: milkcandy.xyz
   ignorePatterns:
     - private
     - templates
