@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 ---
 
 #### Architecture Documentation: Securing CTFd via Cloudflare mTLS and Nginx Reverse Proxy
