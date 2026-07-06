@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 ---
 
 #### Architecture Documentation: Securing CTFd via Cloudflare mTLS and Nginx Reverse Proxy
@@ -34,10 +34,10 @@ CTFd was cloned and launched via Docker Compose, which provisions the following 
 ### 2.1 Clone and Launch
 
 ```bash
-cd /opt
+cd ~
 sudo git clone https://github.com/CTFd/CTFd.git
 sudo chown -R $USER:$USER /opt/CTFd
-cd /opt/CTFd
+cd ~/CTFd
 docker compose up -d
 ```
 

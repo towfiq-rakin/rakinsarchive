@@ -1,8 +1,7 @@
 ---
-title: Towfiq Omar Rakin
+title: Welcome to Milk Candy!
 ---
-#### Hello! Welcome to Rakin's Archive!
-I'm [Rakin](https://rakin.me), also known as *RayQuaZa*, a 3$^{rd}$ Year undergrad student based in Dhaka, Bangladesh🇧🇩.  
+Hello! I'm [Towfiq Omar Rakin](https://rakin.me), also known as *RayQuaZa*, a 3$^{rd}$ Year undergrad student based in Dhaka, Bangladesh🇧🇩.  
 My current technical focus involves Cyber Security, Full Stack Development, Web Programming and trying not to forget Competitive Programming. My interests expends to Cloud Computing and DevOps.  
 Get in touch with me via [LinkedIn](https://linkedin.com/in/towfiqrakin), [Discord](https://discord.com/users/459564399137390594) and [contact@rakin.me](mailto:contact@rakin.me)
 #### Education
@@ -26,3 +25,4 @@ Bachelor of Computer Science and Engineering -- [Bangladesh University of Profes
 - [[3-1/Data Communication/IP Address|IP Address & Subnetting]]
 - [[3-1/MMAL/8086|8086 Microprocessor]]
 - [[3-1/MMAL/8051|8051 Microcontroller]]
+

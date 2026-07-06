@@ -107,7 +107,7 @@ Circular economy is an economic system designed to eliminate waste and contin
 8. **Waste management:** Processing and recycling recovered materials to funnel them back into production as new inputs.
 ## Question 6
 ###### a. What is EIA? Describe the key features of EIA.<span style="float: right; ">07</span>
-EIA is a process which can be used to improve decision-making and ensure that development options under consideration are environmentally, socially and economically sound and sustainable.  
+EIA *(Environmental Impact Assessment)* is a process which can be used to improve decision-making and ensure that development options under consideration are environmentally, socially and economically sound and sustainable.  
 
 **Key features of EIA**  
 1. EIA is a continuous and integral component of planning that should run continuously throughout the planning cycle of any development initiative.
