@@ -94,7 +94,7 @@ server {
 }
 
 server {
-    listen 443 ssl;
+    listen 443 ssl http2;
     server_name cp.bupcopc.tech;
 
     ssl_certificate /etc/ssl/certs/cloudflare_origin.pem;
@@ -128,3 +128,4 @@ The Cloudflare Dashboard was configured to mandate secure communication protocol
 1. Navigated to **SSL/TLS > Overview** and configured the encryption mode to **Full (strict)**.
 2. Navigated to **SSL/TLS > Origin Server** and enabled **Authenticated Origin Pulls**.
 3. Navigated to **DNS > Records** and verified the `A` record for the domain was set to **Proxied**.
+
